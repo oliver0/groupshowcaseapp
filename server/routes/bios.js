@@ -5,7 +5,7 @@ var bios = [
   {
     memberName: 'Jeff',
     bio: "Jeff is a guy. He can read just fine.",
-    image: url("google.com")
+    image: "url"
   }
 ];
 

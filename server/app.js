@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 
 // routing modules
 var index = require('./routes/index');
-var bios = require('./routes/index')
+var bios = require('./routes/bios')
 // use body parser on EVERY request
 // app.use(bodyParser.urlencoded({ extended: true }));
 
