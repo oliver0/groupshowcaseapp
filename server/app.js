@@ -6,11 +6,13 @@ var bodyParser = require('body-parser');
 // routing modules
 var index = require('./routes/index');
 var bios = require('./routes/bios')
+var likes = require('./routes/likes')
 // use body parser on EVERY request
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.use('/bios', bios);
+app.use('/likes', likes);
 
 // Static Files
 app.use('/', index);
