@@ -8,8 +8,19 @@ $(document).ready(function(){
       type: 'GET',
       url: '/bios',
       success: function(dataFromBackEnd){
-        console.log(dataFromBackEnd);
+        appendBio(dataFromBackEnd);
       }
     });
+  }
+
+  function appendBio(bioData){
+    $("#bioContainer").append('<div class="bio"></div>');
+    for (var i = 0; i < bioData.length; i++) {
+      var $el = $("#bioContainer").children().last();
+      $el.append('<h3>' + bioData[i].memberName + '</h3>');
+      $el.append('<p>Bio: ' + bioData[i].bio + '</p>');
+      $el.append('<img src="' + bioData[i].image + '"/>');
+    }
+
   }
 });
