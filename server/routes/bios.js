@@ -23,7 +23,6 @@ var biosObject = [
 ];
 
 router.get('/', function(req, res) {
-  console.log('get boios');
   res.send(biosObject);
 });
 

@@ -12,18 +12,14 @@ router.get('/', function(req, res) {
   console.log(biosObject);
   res.send(biosObject);
 });
-router.post('/', function(req, res) {
-  console.log("likes page req.body " , req.body);
-  console.log('adding a like ');
+router.post('/', function(req, res) { //from POST on client.js
+
   var memberName = req.body.memberName;
   for (var i = 0; i < biosObject.length; i++) {
     if(memberName == biosObject[i].memberName){
-      biosObject[i].likes++;
+      biosObject[i].likes++; //this funciton finds the received object. check name and if matches original object, adds 1 to likes.
     }
   }
-  console.log(biosObject);
-  // console.log('req dot body', req.body);
-  //likes.push(req.body);
   res.sendStatus(201);
 });
 module.exports = router;
